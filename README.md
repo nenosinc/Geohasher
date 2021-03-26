@@ -1,3 +1,3 @@
 # Geohasher
 
-A description of this package.
+Encode and decode geohashes for location-based queries.
