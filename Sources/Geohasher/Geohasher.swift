@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 public struct Geohasher {
     
@@ -37,6 +38,15 @@ public struct Geohasher {
         let lonRange = lon.reduce((-180.0, 180.0), combiner)
         // lonRange = (10.407439023256302, 10.407440364360809)
         return (latRange, lonRange)
+    }
+    
+    /// Encode a `GeoPoint` to a Geohash
+    ///
+    /// - parameter geopoint: The Firebase GeoPoint.
+    /// - parameter precision: The desired hash precision.
+    ///
+    public static func encode(geopoint: GeoPoint, precision: Precision = .twoMeters) -> String {
+        return Geohasher.encode(latitude: geopoint.latitude, longitude: geopoint.longitude, length: precision.rawValue)
     }
     
     /// Encode a coordinate set to a Geohash
