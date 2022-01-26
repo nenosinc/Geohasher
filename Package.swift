@@ -16,7 +16,10 @@ let package = Package(
         // visible to other packages.
         .library(
             name: "Geohasher",
-            targets: ["Geohasher"])
+            targets: ["Geohasher"]),
+        .library(
+            name: "Geohasher Slim",
+            targets: ["Geohasher Slim"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -31,6 +34,10 @@ let package = Package(
             dependencies: [
                 .product(name: "FirebaseFirestore", package: "Firebase")
             ]),
+        .target(
+            name: "Geohasher Slim",
+            path: "./Sources/Geohasher",
+            exclude: ["Geohasher+Firebase.swift"]),
         .testTarget(
             name: "GeohasherTests",
             dependencies: ["Geohasher"]),
