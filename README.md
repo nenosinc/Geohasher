@@ -18,10 +18,9 @@ The beauty of this whole system is that you only need to perform evaluations on 
 ## Overview
 This Swift Package is a lightweight solution that makes encoding and decoding geohashes blissfully easy.
 
-There are three ways you can go about using this package:
+There are two ways you can go about using this package:
 
  1. Just add the `Geohash` package as a dependency on your project running Swift 5.3, iOS 13.0, or macOS 11.0 or later.
- 2. Use the `Geohash Slim`  target as a dependency **instead** if you don't need any of the Google Firebase helpers.
  3. Or, there's a handy dandy shell script bundled in this repo. Go ahead -- download it and plug it into a project, automation, whatever your heart desires!
 
 ## The Code
